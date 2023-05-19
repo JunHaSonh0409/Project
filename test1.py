@@ -3,9 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
-import time
 
-time.sleep(2)
 model = load_model("C:\\JUNHA\\model.h5", custom_objects={"Adam": Adam})
 
 my_devices = tf.config.experimental.list_physical_devices(device_type="CPU")
@@ -15,7 +13,7 @@ tf.debugging.set_log_device_placement(True)
 
 cap = cv2.VideoCapture(0)  # 0 for the default camera
 ret, frame = cap.read()
-
+# dsadsad
 img_size = (224, 224)
 img = cv2.resize(frame, img_size)  # resize the image to the desired size
 img = img / 255.0  # normalize the pixel values to be between 0 and 1
