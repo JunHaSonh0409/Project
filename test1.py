@@ -3,7 +3,9 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
+import time
 
+time.sleep(2)
 model = load_model("C:\\JUNHA\\model.h5", custom_objects={"Adam": Adam})
 
 my_devices = tf.config.experimental.list_physical_devices(device_type="CPU")
